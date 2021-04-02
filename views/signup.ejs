@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/css/bootstrap.min.css">
+   <link rel="stylesheet" href="/css/index.css">
+   <title>Sign Up</title>
+</head>
+
+<body>
+   <section class="vh-100 d-flex align-items-center justify-content-center">
+      <div class="container d-flex flex-column align-items-center">
+         <h1 class="mb-3">Sign Up</h1>
+         <% if (error) { %>
+            <div class="alert alert-danger"><%= error %> </div>
+         <% } %>  
+         <form class="d-flex flex-column" action="/signup" method="POST">
+            <label>
+               <input class="form-control mb-3" type="text" name="login" placeholder="Login" required minlength="4"
+                  maxlength="20">
+            </label>
+            <label>
+               <input class="form-control mb-3" type="password" name="password" placeholder="Password" required
+                  minlength="4">
+            </label>
+            <button class="btn btn-primary mb-2">Sign Up</button>
+            <a class="btn btn-info" href="/login">Login</a>
+         </form>
+      </div>
+   </section>
+
+</body>
+</html>
